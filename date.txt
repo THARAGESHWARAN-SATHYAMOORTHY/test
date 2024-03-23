@@ -1,0 +1,23 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class StringToDate {
+    public static void main(String[] args) {
+        // Define the date string
+        String dateString = "2024-03-23 14:30:00";
+
+        // Define the date format
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        try {
+            // Parse the string to obtain a Date object
+            Date date = dateFormat.parse(dateString);
+
+            // Print the Date object
+            System.out.println("String as Date: " + date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+}
